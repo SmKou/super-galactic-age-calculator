@@ -8,7 +8,7 @@ describe("DogCalculator", () => {
     test("Should get an age in dog years", () => {
         const age = 1;
         const dog = new Dog(age);
-        expect(dog.getDogAge()).toBe(7);
+        expect(dog.getDogAge(dog.age)).toBe(7);
     })
 
     /* Test added to Dog describes for relying on use of prototype's method */
@@ -24,7 +24,7 @@ describe("DogCalculator", () => {
         const futurAge = 14;
         const planet = "earth";
         const dog = new Dog(age);
-        expect(dog.getPastYears(futurAge, planet)).toBe(28);
+        expect(dog.getFutureYears(futurAge, planet)).toBe(28);
     })
 })
 
