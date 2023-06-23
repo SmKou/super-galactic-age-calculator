@@ -83,4 +83,10 @@ describe("getPastYears", () => {
         const planet = "earth";
         expect(calculator.getPastYears(age, planet)).toBe(4);
     })
+
+    test("Should return the number of years of the full age", () => {
+        const age = 11;
+        const planet = "earth";
+        expect(calculator.getPastYears(age, planet)).toBe(10);
+    })
 })
