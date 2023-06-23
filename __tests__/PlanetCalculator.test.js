@@ -50,6 +50,11 @@ describe("getAgeFromYear", () => {
         const year = 2000;
         expect(calculator.getAgeFromYear(year)).toBe(23);
     })
+
+    test("Should return 0 if given year is future", () => {
+        const year = 2024;
+        expect(calculator.getAgeFromYear(year)).toBe(0);
+    })
 })
 
 describe("getMercuryYears", () => {
