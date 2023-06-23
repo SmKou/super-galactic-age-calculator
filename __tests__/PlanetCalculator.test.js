@@ -30,6 +30,10 @@ describe("getAgeInYear", () => {
         const year = 2073;
         expect(calculator.getAgeInYear(year)).toBe(51);
     })
+    test("Should return zero for past year", () => {
+        const year = 2015;
+        expect(calculator.getAgeInYear(year)).toBe(0);
+    })
 })
 
 describe("getMercuryYears", () => {
