@@ -1,3 +1,4 @@
+import PlanetCalculator from '../src/js/bs/PlanetCalculator';
 import Calculator from '../src/js/bs/PlanetCalculator';
 
 describe("Calculator", () => {
@@ -30,9 +31,20 @@ describe("getAgeInYear", () => {
         const year = 2073;
         expect(calculator.getAgeInYear(year)).toBe(51);
     })
+
     test("Should return zero for past year", () => {
         const year = 2015;
         expect(calculator.getAgeInYear(year)).toBe(0);
+    })
+})
+
+describe("setAgeToYear", () => {
+    test("Should change saved age to age in given year", () => {
+        const age = 1;
+        const year = 2073;
+        const calculator = new PlanetCalculator(age);
+        calculator.setAgeToYear(year);
+        expect(calculator.age).toBe(51);
     })
 })
 
