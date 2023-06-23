@@ -71,7 +71,7 @@ describe("getJupiterYears", () => {
 })
 
 describe("getPastYears", () => {
-    let calculator;
+    let age, planet, calculator;
 
     beforeEach(() => {
         const age = 10;
@@ -79,14 +79,20 @@ describe("getPastYears", () => {
     })
 
     test("Should return a number of years since the given age", () => {
-        const age = 6;
-        const planet = "earth";
+        age = 6;
+        planet = "earth";
         expect(calculator.getPastYears(age, planet)).toBe(4);
     })
 
+    test("Should return a number of years since the given age converted to years on mars", () => {
+        age = 6;
+        planet = "mars";
+        expect(calculator.getPastYears(age, planet)).toBe(4 / 1.88);
+    })
+
     test("Should return the number of years of the full age", () => {
-        const age = 11;
-        const planet = "earth";
+        age = 11;
+        planet = "earth";
         expect(calculator.getPastYears(age, planet)).toBe(10);
     })
 })
