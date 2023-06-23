@@ -18,7 +18,9 @@ export default class PlanetCalculator {
     }
 
     /** Subtracts current year from year and adds to age  */
-    setAgeToYear(year) { }
+    setAgeToYear(year) { 
+        this.age = this.getAgeInYear(year);
+    }
 
     /** Subtracts year from current year to determine age */
     setAgeFromYear(year) { }
