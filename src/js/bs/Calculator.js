@@ -3,19 +3,13 @@ export default class Calculator {
         this.age = age;
     }
 
-    getMercuryYears(n) { 
-        return n / 0.24;
-    }
+    getMercuryYears(n) { return n / 0.24 }
     
-    getVenusYears(n) { 
-        return n / 0.62;
-    }
+    getVenusYears(n) { return n / 0.62 }
     
-    getMarsYears(n) { 
-        return n / 1.88;
-    }
+    getMarsYears(n) { return n / 1.88 }
 
-    getJupiterYears(n) { }
+    getJupiterYears(n) { return n / 11.86 }
     
     getPastYears(n, planet) { }
 
