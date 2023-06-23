@@ -1,6 +1,6 @@
 export default class PlanetCalculator {
     constructor(age) {
-        this.age = age;
+        this.age = (age < 150)? age : this.getAgeFromYear(age);
         this.getPlanet = {
             "earth": (n) => n,
             "mercury": this.getMercuryYears,
