@@ -96,3 +96,18 @@ describe("getPastYears", () => {
         expect(calculator.getPastYears(age, planet)).toBe(10);
     })
 })
+
+describe("getFutureYears", () => {
+    let age, planet, calculator;
+
+    beforeEach(() => {
+        const age = 10;
+        calculator = new Calculator(age);
+    })
+
+    test("Should return number of years between given age and saved age", () => {
+        const age = 14;
+        const planet = "earth";
+        expect(calculator.getFutureYears(age, planet)).toBe(4);
+    })
+})
