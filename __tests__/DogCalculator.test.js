@@ -19,12 +19,26 @@ describe("DogCalculator", () => {
         const dog = new Dog(age);
         expect(dog.getPastYears(pastAge, planet)).toBe(28);
     })
+    test("getPastYears: Should return difference in years from a dog's speculative age converted to years on mercury", () => {
+        const age = 10;
+        const pastAge = 6;
+        const planet = "mercury";
+        const dog = new Dog(age);
+        expect(dog.getPastYears(pastAge, planet)).toBeCloseTo(28 / 0.24);
+    })
     test("getFutureYears: Should return difference in years from a dog's speculative age", () => {
         const age = 10;
         const futurAge = 14;
         const planet = "earth";
         const dog = new Dog(age);
         expect(dog.getFutureYears(futurAge, planet)).toBe(28);
+    })
+    test("getFutureYears: Should return difference in years from a dog's speculative age converted to years on mars", () => {
+        const age = 10;
+        const futurAge = 14;
+        const planet = "mars";
+        const dog = new Dog(age);
+        expect(dog.getFutureYears(futurAge, planet)).toBeCloseTo(28 / 1.88);
     })
 })
 
