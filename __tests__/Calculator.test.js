@@ -116,4 +116,10 @@ describe("getFutureYears", () => {
         const planet = "jupiter";
         expect(calculator.getFutureYears(age, planet)).toBe(4 / 11.86);
     })
+
+    test("Should be 0 if age is less than saved age", () => {
+        const age = 6;
+        const planet = "earth";
+        expect(calculator.getFutureYears(age, planet)).toBe(0);
+    })
 })
