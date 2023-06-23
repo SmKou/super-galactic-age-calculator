@@ -3,7 +3,9 @@ export default class Calculator {
         this.age = age;
     }
 
-    getMercuryYears(n) { }
+    getMercuryYears(n) { 
+        return n / 0.24;
+    }
     
     getVenusYears(n) { }
     
