@@ -11,7 +11,9 @@ export default class Calculator {
         return n / 0.62;
     }
     
-    getMarsYears(n) { }
+    getMarsYears(n) { 
+        return n / 1.88;
+    }
 
     getJupiterYears(n) { }
     
