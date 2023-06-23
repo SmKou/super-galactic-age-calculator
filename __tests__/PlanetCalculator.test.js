@@ -47,6 +47,12 @@ describe("getAgeInYear", () => {
         const year = 2015;
         expect(calculator.getAgeInYear(year)).toBe(0);
     })
+
+    test("Should return age in given year from current year", () => {
+        const year = 2073;
+        const age = 0;
+        expect(calculator.getAgeInYear(year, age)).toBe(50);
+    })
 })
 
 describe("getAgeFromYear", () => {

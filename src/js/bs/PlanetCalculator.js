@@ -1,6 +1,12 @@
 export default class PlanetCalculator {
     constructor(age) {
-        this.age = (age < 150)? age : this.getAgeFromYear(age);
+        if (age < 150)
+            this.age = age;
+        else {
+            const past = this.getAgeFromYear(age);
+            const future = this.getAgeInYear(age, 0);
+            this.age = past || future;
+        }
         this.getPlanet = {
             "earth": (n) => n,
             "mercury": this.getMercuryYears,
@@ -10,11 +16,11 @@ export default class PlanetCalculator {
         };
     }
 
-    getAgeInYear(year) {
+    getAgeInYear(year, age = this.age) {
         let n = year - (new Date()).getFullYear();
-        if (n < 0)
+        if (n <= 0)
             return 0;
-        return this.age + n;
+        return age + n;
     }
 
     /** Subtracts year from current year to determine age */
