@@ -1,10 +1,20 @@
 import Calculator from '../src/js/bs/Calculator';
 
 describe("Calculator", () => {
-    test("Should produce a calculator object with an age", () => {
+    let calculator;
+
+    beforeEach(() => {
         const age = 1;
-        const calculator = new Calculator(age);
+        calculator = new Calculator(age);
+    })
+
+    test("Should produce a calculator object with an age", () => {
         expect(calculator.age).toBe(1);
+    })
+
+    test("Should produce a calculator object with a directory of planets calling mercury", () => {
+        const planet = 'mercury';
+        expect(calculator.getPlanet[planet](calculator.age)).toBeCloseTo(1 / 0.24)
     })
 })
 

@@ -1,6 +1,9 @@
 export default class Calculator {
     constructor(age) {
         this.age = age;
+        this.getPlanet = {
+            "": () => {}
+        };
     }
 
     getMercuryYears(n) { return n / 0.24 }
