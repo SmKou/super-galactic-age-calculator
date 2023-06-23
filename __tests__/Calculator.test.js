@@ -46,3 +46,16 @@ describe("Calculator.getMarsYears()", () => {
         expect(calculator.getMarsYears(calculator.age)).toBeCloseTo(1 / 1.88)
     })
 })
+
+describe("Calculator.getJupiterYears()", () => {
+    let calculator;
+
+    beforeEach(() => {
+        const age = 1;
+        calculator = new Calculator(age);
+    })
+
+    test("Should return a number of years converted to years on Jupiter", () => {
+        expect(calculator.getJupiterYears(calculator.age)).toBeCloseTo(1 / 11.86)
+    })
+})
