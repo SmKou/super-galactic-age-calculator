@@ -43,19 +43,17 @@ describe("DogCalculator", () => {
 })
 
 describe("GiantDogCalculator", () => {
-    test("Should return a giant dog calculator with an age and dog age for giant dogs", () => {
+    test("Should get an age in dog years for giant dogs", () => {
         const age = 1;
         const dog = new GDog(age);
-        expect(dog.age).toBe(1);
-        expect(dog.dogAge).toBeCloseTo(10.625);
+        expect(dog.getDogAge(dog.age)).toBeCloseTo(10.625);
     })
 })
 
 describe("SmallDogCalculator", () => {
-    test("Should return a small dog calculator with an age and dog age for small dogs", () => {
+    test("Should get an age in dog years for small dogs", () => {
         const age = 1;
         const dog = new SDog(age);
-        expect(dog.age).toBe(1);
-        expect(dog.dogAge).toBeCloseTo(5.31);
+        expect(dog.getDogAge(dog.age)).toBeCloseTo(5.31);
     })
 })

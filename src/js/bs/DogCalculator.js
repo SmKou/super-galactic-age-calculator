@@ -21,13 +21,15 @@ export class DogCalculator extends PlanetCalculator {
 export class GiantDogCalculator extends DogCalculator {
     constructor(age) {
         super(age);
-        this.dogAge = this.age * 10.625;
-     }
+    }
+    
+    getDogAge(n) { return n * 10.625 }
 }
 
 export class SmallDogCalculator extends DogCalculator {
     constructor(age) {
         super(age);
-        this.dogAge = this.age * 5.31;
     }
+
+    getDogAge(n) { return n * 5.31 }
 }

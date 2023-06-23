@@ -26,8 +26,11 @@ describe("getMercuryYears", () => {
         calculator = new Calculator(age);
     })
 
-    test("Should return a number of years converted to years on Mercury", () => {
+    test("Should return a number of years converted to years on mercury", () => {
         expect(calculator.getMercuryYears(calculator.age)).toBeCloseTo(1 / 0.24)
+    })
+    test("Should return age in years on mercury", () => {
+        expect(calculator.getMercuryYears()).toBeCloseTo(1 / 0.24)
     })
 })
 
@@ -39,8 +42,11 @@ describe("getVenusYears", () => {
         calculator = new Calculator(age);
     })
 
-    test("Should return a number of years converted to years on Venus", () => {
+    test("Should return a number of years converted to years on venus", () => {
         expect(calculator.getVenusYears(calculator.age)).toBeCloseTo(1 / 0.62)
+    })
+    test("Should return age in years on venus", () => {
+        expect(calculator.getVenusYears()).toBeCloseTo(1 / 0.62)
     })
 })
 
@@ -52,8 +58,11 @@ describe("getMarsYears", () => {
         calculator = new Calculator(age);
     })
 
-    test("Should return a number of years converted to years on Mars", () => {
+    test("Should return a number of years converted to years on mars", () => {
         expect(calculator.getMarsYears(calculator.age)).toBeCloseTo(1 / 1.88)
+    })
+    test("Should return age in years on mars", () => {
+        expect(calculator.getMarsYears()).toBeCloseTo(1 / 1.88)
     })
 })
 
@@ -65,8 +74,11 @@ describe("getJupiterYears", () => {
         calculator = new Calculator(age);
     })
 
-    test("Should return a number of years converted to years on Jupiter", () => {
+    test("Should return a number of years converted to years on jupiter", () => {
         expect(calculator.getJupiterYears(calculator.age)).toBeCloseTo(1 / 11.86)
+    })
+    test("Should return age in years on jupiter", () => {
+        expect(calculator.getJupiterYears()).toBeCloseTo(1 / 11.86)
     })
 })
 
