@@ -7,13 +7,13 @@ export class DogCalculator extends PlanetCalculator {
 
     getDogAge(n) { return n * 7 }
 
-    getPastYears(age, planet) {
-        let n = this.age - age;
+    getDogPast(age, planet) {
+        const n = this.getPastYears(age, planet);
         return this.getDogAge(n);
      }
     
-    getFutureYears(age, planet) {
-        let n = age - this.age;
+    getDogFuture(age, planet) {
+        const n = this.getFutureYears(age, planet);
         return this.getDogAge(n);
     }
 }
