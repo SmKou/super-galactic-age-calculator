@@ -3,10 +3,13 @@ import PlanetCalculator from "./PlanetCalculator";
 export class DogCalculator extends PlanetCalculator { 
     constructor(age) {
         super(age);
-        this.dogAge = this.age * 7;
     }
 
-    getPastYears(age, plaent) { }
+    getDogAge(n) { return n * 7 }
+
+    getPastYears(age, plaent) {
+        let n = this.age - age;
+     }
     
     getFutureYears(age, planet) {}
 }

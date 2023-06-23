@@ -5,11 +5,10 @@ import {
 } from '../src/js/bs/DogCalculator';
 
 describe("DogCalculator", () => {
-    test("Should return a dog calculator with an age and dog age", () => {
+    test("Should get an age in dog years", () => {
         const age = 1;
         const dog = new Dog(age);
-        expect(dog.age).toBe(1);
-        expect(dog.dogAge).toBe(7);
+        expect(dog.getDogAge()).toBe(7);
     })
 
     /* Test added to Dog describes for relying on use of prototype's method */
