@@ -7,14 +7,20 @@ export class DogCalculator extends PlanetCalculator {
      }
 }
 
-export class BigDogCalculator extends DogCalculator {
-    constructor (age) { }
+export class GiantDogCalculator extends DogCalculator {
+    constructor(age) {
+        super();
+     }
  }
 
-export class MedDogCalculator extends DogCalculator { 
-    constructor (age) { }
+export class MedLgDogCalculator extends DogCalculator { 
+    constructor(age) {
+        super();
+     }
 }
 
 export class SmallDogCalculator extends DogCalculator {
-    constructor (age) {}
+    constructor(age) {
+        super();
+    }
 }
