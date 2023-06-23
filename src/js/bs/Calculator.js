@@ -2,7 +2,10 @@ export default class Calculator {
     constructor(age) {
         this.age = age;
         this.getPlanet = {
-            "": () => {}
+            "mercury": this.getMercuryYears,
+            "venus": this.getVenusYears,
+            "mars": this.getMarsYears,
+            "jupiter": this.getJupiterYears
         };
     }
 
