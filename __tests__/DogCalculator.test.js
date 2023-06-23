@@ -5,13 +5,6 @@ import {
 } from '../src/js/bs/DogCalculator';
 
 describe("DogCalculator", () => {
-    let dog;
-
-    beforeEach(() => {
-        const age = 1;
-        dog = new Dog(age);
-    })
-
     test("Should return a dog calculator with an age and dog age", () => {
         const age = 1;
         const dog = new Dog(age);
@@ -20,8 +13,19 @@ describe("DogCalculator", () => {
     })
 
     /* Test added to Dog describes for relying on use of prototype's method */
-    test("getMercury: Should return a dog's speculative age converted to years on mercury", () => {
-        expect(dog.getMercury()).toBeCloseTo(7 / 0.24);
+    test("getPastYears: Should return difference in years from a dog's speculative age", () => {
+        const age = 10;
+        const pastAge = 6;
+        const planet = "earth";
+        const dog = new Dog(age);
+        expect(dog.getPastYears(pastAge, planet)).toBe(28);
+    })
+    test("getFutureYears: Should return difference in years from a dog's speculative age", () => {
+        const age = 10;
+        const futurAge = 14;
+        const planet = "earth";
+        const dog = new Dog(age);
+        expect(dog.getPastYears(futurAge, planet)).toBe(28);
     })
 })
 
