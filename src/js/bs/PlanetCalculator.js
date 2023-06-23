@@ -10,7 +10,10 @@ export default class PlanetCalculator {
         };
     }
 
-    getAgeInYear(year) {}
+    getAgeInYear(year) {
+        let n = year - (new Date()).getFullYear();
+        return this.age + n;
+    }
 
     getMercuryYears(n = this.age) { return n / 0.24 }
     
