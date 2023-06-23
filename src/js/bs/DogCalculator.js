@@ -5,6 +5,8 @@ export class DogCalculator extends PlanetCalculator {
         super(age);
         this.dogAge = this.age * 7;
     }
+
+    getMercury() {  }
 }
 
 export class GiantDogCalculator extends DogCalculator {

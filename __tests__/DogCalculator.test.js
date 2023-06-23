@@ -5,11 +5,23 @@ import {
 } from '../src/js/bs/DogCalculator';
 
 describe("DogCalculator", () => {
+    let dog;
+
+    beforeEach(() => {
+        const age = 1;
+        dog = new Dog(age);
+    })
+
     test("Should return a dog calculator with an age and dog age", () => {
         const age = 1;
         const dog = new Dog(age);
         expect(dog.age).toBe(1);
         expect(dog.dogAge).toBe(7);
+    })
+
+    /* Test added to Dog describes for relying on use of prototype's method */
+    test("getMercury: Should return a dog's speculative age converted to years on mercury", () => {
+        expect(dog.getMercury()).toBeCloseTo(7 / 0.24);
     })
 })
 
