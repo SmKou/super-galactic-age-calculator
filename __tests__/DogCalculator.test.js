@@ -5,8 +5,7 @@ import {
     DogCalculator as Dog,
     BigDogCalculator as BigDog,
     MedDogCalculator as MedDog,
-    SmallDogCalculator as SmallDog,
-    DogCalculator
+    SmallDogCalculator as SmallDog
 } from '../src/js/bs/DogCalculator';
 
 describe("DogCalculator", () => {

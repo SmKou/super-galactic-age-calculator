@@ -1,7 +1,10 @@
 import PlanetCalculator from "./PlanetCalculator";
 
 export class DogCalculator extends PlanetCalculator { 
-    constructor (age) { }
+    constructor(age) {
+        super(age);
+        this.dogAge = this.age * 7;
+     }
 }
 
 export class BigDogCalculator extends DogCalculator {
