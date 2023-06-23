@@ -1,4 +1,4 @@
-export default class Calculator {
+export default class PlanetCalculator {
     constructor(age) {
         this.age = age;
         this.getPlanet = {
