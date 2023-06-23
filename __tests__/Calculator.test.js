@@ -16,7 +16,7 @@ describe("Calculator.getMercuryYears()", () => {
         calculator = new Calculator(age);
     })
 
-    test("Should return a number of years in Mercury years", () => {
+    test("Should return a number of years converted to years on Mercury", () => {
         expect(calculator.getMercuryYears(calculator.age)).toBeCloseTo(1 / 0.24)
     })
 })
@@ -29,7 +29,20 @@ describe("Calculator.getVenusYears()", () => {
         calculator = new Calculator(age);
     })
 
-    test("Should return a number of years in Venus years", () => {
+    test("Should return a number of years converted to years on Venus", () => {
         expect(calculator.getVenusYears(calculator.age)).toBeCloseTo(1 / 0.62)
+    })
+})
+
+describe("Calculator.getMarsYears()", () => {
+    let calculator;
+
+    beforeEach(() => {
+        const age = 1;
+        calculator = new Calculator(age);
+    })
+
+    test("Should return a number of years converted to years on Mars", () => {
+        expect(calculator.getMarsYears(calculator.age)).toBeCloseTo(1 / 1.88)
     })
 })
