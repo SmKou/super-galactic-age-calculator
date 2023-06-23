@@ -1,21 +1,26 @@
 import PlanetCalculator from '../src/js/bs/PlanetCalculator';
-import Calculator from '../src/js/bs/PlanetCalculator';
 
 describe("Calculator", () => {
     let calculator;
 
     beforeEach(() => {
         const age = 1;
-        calculator = new Calculator(age);
+        calculator = new PlanetCalculator(age);
     })
 
     test("Should produce a calculator object with an age", () => {
         expect(calculator.age).toBe(1);
     })
 
-    test("Should produce a calculator object with a directory of planets calling mercury", () => {
+    test("Should produce a calculator object with an accessible directory of planets to convert age", () => {
         const planet = 'mercury';
         expect(calculator.getPlanet[planet](calculator.age)).toBeCloseTo(1 / 0.24)
+    })
+
+    test("Should set age from given year if given a year instead", () => {
+        const age = 2000;
+        const age_calculator = new PlanetCalculator(age);
+        expect(age_calculator.age).toBe(23);
     })
 })
 
@@ -24,7 +29,7 @@ describe("getAgeInYear", () => {
 
     beforeEach(() => {
         const age = 1;
-        calculator = new Calculator(age);
+        calculator = new PlanetCalculator(age);
     })
 
     test("Should return age in given year", () => {
@@ -62,7 +67,7 @@ describe("getMercuryYears", () => {
 
     beforeEach(() => {
         const age = 1;
-        calculator = new Calculator(age);
+        calculator = new PlanetCalculator(age);
     })
 
     test("Should return a number of years converted to years on mercury", () => {
@@ -78,7 +83,7 @@ describe("getVenusYears", () => {
 
     beforeEach(() => {
         const age = 1;
-        calculator = new Calculator(age);
+        calculator = new PlanetCalculator(age);
     })
 
     test("Should return a number of years converted to years on venus", () => {
@@ -94,7 +99,7 @@ describe("getMarsYears", () => {
 
     beforeEach(() => {
         const age = 1;
-        calculator = new Calculator(age);
+        calculator = new PlanetCalculator(age);
     })
 
     test("Should return a number of years converted to years on mars", () => {
@@ -110,7 +115,7 @@ describe("getJupiterYears", () => {
 
     beforeEach(() => {
         const age = 1;
-        calculator = new Calculator(age);
+        calculator = new PlanetCalculator(age);
     })
 
     test("Should return a number of years converted to years on jupiter", () => {
@@ -126,7 +131,7 @@ describe("getPastYears", () => {
 
     beforeEach(() => {
         const age = 10;
-        calculator = new Calculator(age);
+        calculator = new PlanetCalculator(age);
     })
 
     test("Should return a number of years since the given age", () => {
@@ -153,7 +158,7 @@ describe("getFutureYears", () => {
 
     beforeEach(() => {
         const age = 10;
-        calculator = new Calculator(age);
+        calculator = new PlanetCalculator(age);
     })
 
     test("Should return number of years between given age and saved age", () => {
