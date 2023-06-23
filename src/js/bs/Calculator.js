@@ -18,7 +18,10 @@ export default class Calculator {
 
     getJupiterYears(n) { return n / 11.86 }
     
-    getPastYears(age, planet) { }
+    getPastYears(age, planet) { 
+        const n = this.age - age;
+        return this.getPlanet[planet](n);
+    }
 
     getFutureYears(age, planet) {}
 }
