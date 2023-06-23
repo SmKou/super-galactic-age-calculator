@@ -15,12 +15,15 @@ module.exports = {
     },
     devtool: 'eval-source-map', // enable: generate source maps
     plugins: [
-        new ESLintPlugin(),
+        new ESLintPlugin({
+            fix: true,
+            emitWarning: true
+        }),
         new CleanWebpackPlugin({
             verbose: true // optional
         }),
         new HtmlWebpackPlugin({
-            title: 'node',
+            title: 'super-galactic-age-calculator',
             template: './src/index.html',
             inject: 'body'
         })

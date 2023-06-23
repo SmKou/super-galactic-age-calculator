@@ -5,12 +5,12 @@ export class DogCalculator extends PlanetCalculator {
         super(age);
     }
 
-    getDogAge(n) { return n * 7 }
+    getDogAge(n) { return n * 7; }
 
     getDogPast(age, planet) {
         const n = this.getPastYears(age, planet);
         return this.getDogAge(n);
-     }
+    }
     
     getDogFuture(age, planet) {
         const n = this.getFutureYears(age, planet);
@@ -23,7 +23,7 @@ export class GiantDogCalculator extends DogCalculator {
         super(age);
     }
     
-    getDogAge(n) { return n * 10.625 }
+    getDogAge(n) { return n * 10.625; }
 }
 
 export class SmallDogCalculator extends DogCalculator {
@@ -31,5 +31,5 @@ export class SmallDogCalculator extends DogCalculator {
         super(age);
     }
 
-    getDogAge(n) { return n * 5.31 }
+    getDogAge(n) { return n * 5.31; }
 }

@@ -1,10 +1,10 @@
-# Node Template
+# Super Galactic Age Calculator
 
 By: Stella Marie
 
-Template repo for Node.js project with Webpack, ESLint, Babel, and Jest.
+App for calculating human and dog ages on other planets.
 
-View on [Github Pages](https://username.github.io/repo-name/)
+View on [Github Pages](https://username.github.io/super-galactic-age-calculator/)
 
 ## **Technologies Used**
 
@@ -19,31 +19,36 @@ View on [Github Pages](https://username.github.io/repo-name/)
 
 ## **Description**
 
-Node is a template repo for a basic Node.js project, outfitted with a bundler, linter, javascript converter, and test package. The file structure consists of the config files in the root, along with package.json for setup, and the folders, _ _ tests _ _ containing test files and src contained the development files. There is one sample test file in the tests folder, whereas src consists of assets, css and js with index.js and index.html. Assets is for images and fonts. It contains two subdirectories, img and fonts, both containing samples, the latter possessing a selection: Bebas Neue, League Spartan, Muli, Nunito Sans, Oswald, Ovo, and Ra Mono. Css is for stylesheets, and contains two sample files, fonts.css and styles.css. The present styles in the latter are derived from Skeleton 2.0.4 by Dave Gamache. Js is for interaction and functionality, and has two subdirectories, bs for business logic and ui for user interface logic.
+Super Galactic Age Calculator converts age in earth years to the equivalent on other planets, namely Mercury, Venus, Mars and Jupiter. The age can either be in human years or dog years. The standard conversion is 1 to 7 for dog years, but this is adjusted if you choose to base it on a small- or giant-sized dog. For the given age, one can enter an actual age, or have an age calculated from a given year, so long as the year is not 150 or less.
+
+Demo: [Github Pages](https://smkou.github.io/super-galactic-age-calculator/)
+
+### Under Consideration
+
+- Add celebrities and use their age in the calculator
+- Calculate days between birthdays and total since birth
 
 ## **Complete Setup**
 
-- Navigate to main page of repo
-- Above file list, click **Use this template**
-- Dropdown: select **Create a new repository**
-- Fill out create repo form
+This project will not be accepting pull requests, but you may fork the project for your own use.
 
-### **Local Setup**
+- [repository page](https://github.com/SmKou/super-galactic-age-calculator)
+- Fork the project: Click fork and fill out create repo form
+- In newly made repo, click Code (clone) and get the .git url
 
-- Navigate to your new repo
-- Clone it
+Note when you clone a project, you don't need a local directory with the project's name. If you clone a repo, a directory will be created in the directory you're in unless the directory you clone into has the same name as the project. To clone the project in your terminal:
 
 ```bash
-git clone .../.git
-git pull origin main
+git clone https://github.com/USERNAME/REPOSITORY.git
 ```
 
-- Load packages
+Since this project comes with Node libraries, you'll need to load the project:
 
 ```bash
 npm install
 ```
 
+Note:
 Optionally, you can remove .DS_Store from .gitignore, if you are not using a Mac.
 
 **Do not forget:**
@@ -67,13 +72,7 @@ README.md
 index.html
 - Line 6 title in head
 
-Change this readme to reflect your project's purpose and setup. Also, do not forget to change the copyright. It's best to produce a license when creating the repo, hence the initial pull.
-
-### **Change imports, exports and component files and tests**
-
-Component.js is just a sample. Rename it and use it to contain just the logic of a single component. Components can be seen as handlers of an object, feature, or state.
-
-Component.test.js is just a sample with a single test and describe. Each component should have a corresponding test file with the same name, but with an extension of .test.js, and the test file should only test the functionality of its corresponding component. Make sure you're importing what is needed for it to run.
+Change this readme to reflect your project's purpose and setup. Also, do not forget to change the copyright.
 
 ## **Rendering**
 
@@ -115,7 +114,7 @@ git subtree push --prefix dist origin gh-pages
 
 ## **Known Bugs**
 
-Please report any issues in using this template.
+Please report any issues in using this app.
 
 ## **License**
 

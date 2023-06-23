@@ -29,15 +29,15 @@ export default class PlanetCalculator {
         if (n < 0)
             return 0;
         return n;
-     }
+    }
 
-    getMercuryYears(n = this.age) { return n / 0.24 }
+    getMercuryYears(n = this.age) { return n / 0.24; }
     
-    getVenusYears(n = this.age) { return n / 0.62 }
+    getVenusYears(n = this.age) { return n / 0.62; }
     
-    getMarsYears(n = this.age) { return n / 1.88 }
+    getMarsYears(n = this.age) { return n / 1.88; }
 
-    getJupiterYears(n = this.age) { return n / 11.86 }
+    getJupiterYears(n = this.age) { return n / 11.86; }
     
     getPastYears(age, planet) { 
         let n = this.age - age;

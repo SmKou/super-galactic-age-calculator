@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node_Project_Name</title>
+    <title>Super Galactic Age Calculator</title>
 </head>
 <body>
-    
+    <main>
+        <form>
+            <h1>Super Galactic Age Calculator</h1>
+            <p>Calculate an age in dog years and on other planets.</p>
+            <div class="options">
+                <label for="current-age">
+                    Current Age:
+                    <input type="number" id="current-age" min="1" max="128" placeholder="10">
+                </label>
+                <label for="age-from-year">
+                    From Year:
+                    <input type="number" id="age-from-year" min="151" pattern="/\d{3,4}/">
+                </label>
+                <label for="age-in-year">
+                    In Year:
+                    <input type="number" id="age-in-year" max="50000" pattern="/\d{4,5}/">
+                </label>
+            </div>
+            <div class="mng">
+                <input type="reset" value="Clear All">
+            </div>
+            <div class="options">
+                <label for="show-planets">
+                    <input type="checkbox" id="show-planets" name="calculate" value="planets">
+                    Planets
+                </label>
+                <label for="show-dogs">
+                    <input type="checkbox" id="show-dogs" name="calculate" value="dogs">
+                    Dogs
+                </label>
+            </div>
+            <div class="options hidden planets">
+                <label for="mercury">
+                    <input type="radio" id="mercury" name="planet" value="mercury">
+                    Mercury
+                </label>
+                <label for="venus">
+                    <input type="radio" id="venus" name="planet" value="venus">
+                    Venus
+                </label>
+                <label for="mars">
+                    <input type="radio" id="mars" name="planet" value="mars">
+                    Mars
+                </label>
+                <label for="jupiter">
+                    <input type="radio" id="jupiter" name="planet" value="jupiter">
+                    Jupiter
+                </label>
+            </div>
+            <div class="options hidden dogs">
+                <label for="small">
+                    <input type="radio" id="small" name="dog" value="small">
+                    Small dog
+                </label>
+                <label for="medium-large">
+                    <input type="radio" id="medium-large" name="dog" value="medium-large">
+                    Medium or large dog
+                </label>
+                <label for="giant">
+                    <input type="radio" id="giant" name="dog" value="giant">
+                    Giant dog
+                </label>
+            </div>
+        </form>
+        <section id="output" class="hidden">
+            <p class="age hidden">
+                Age of: <span class="set-age"></span>
+            </p>
+            <p class="planet hidden">
+                Age on <span class="set-planet"></span>
+            </p>
+            <p class="dog-age hidden">
+                Age in dog years: <span class="set-dog-age"></span>
+            </p>
+            <p class="dog-planet hidden">
+                Age on <span class="set-dog-planet"></span>
+            </p>
+        </section>
+    </main>
 </body>
 </html>
