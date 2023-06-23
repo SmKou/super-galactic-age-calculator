@@ -1,10 +1,6 @@
 import {
-    PlanetCalculatorCalculator as Calculator
-} from '../src/js/bs/PlanetCalculator';
-import {
     DogCalculator as Dog,
     GiantDogCalculator as GDog,
-    MedLgDogCalculator as MLDog,
     SmallDogCalculator as SDog
 } from '../src/js/bs/DogCalculator';
 
@@ -22,16 +18,7 @@ describe("GiantDogCalculator", () => {
         const age = 1;
         const dog = new GDog(age);
         expect(dog.age).toBe(1);
-        expect(dog.dogAge).toBe(7);
-    })
-})
-
-describe("MedLgDogCalculator", () => {
-    test("Should return a med-large dog calculator with an age and dog age for medium or large dogs", () => {
-        const age = 1;
-        const dog = new MLDog(age);
-        expect(dog.age).toBe(1);
-        expect(dog.dogAge).toBe(7);
+        expect(dog.dogAge).toBeCloseTo(10.625);
     })
 })
 
@@ -40,6 +27,6 @@ describe("SmallDogCalculator", () => {
         const age = 1;
         const dog = new SDog(age);
         expect(dog.age).toBe(1);
-        expect(dog.dogAge).toBe(7);
+        expect(dog.dogAge).toBeCloseTo(5.31);
     })
 })
