@@ -25,5 +25,8 @@ export default class Calculator {
         return this.getPlanet[planet](n);
     }
 
-    getFutureYears(age, planet) {}
+    getFutureYears(age, planet) {
+        let n = age - this.age;
+        return this.getPlanet[planet](n);
+    }
 }

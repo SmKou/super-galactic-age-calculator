@@ -110,4 +110,10 @@ describe("getFutureYears", () => {
         const planet = "earth";
         expect(calculator.getFutureYears(age, planet)).toBe(4);
     })
+
+    test("Should return number of years of difference converted to years on jupiter", () => {
+        const age = 14;
+        const planet = "jupiter";
+        expect(calculator.getFutureYears(age, planet)).toBe(4 / 11.86);
+    })
 })
