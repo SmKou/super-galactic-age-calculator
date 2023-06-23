@@ -18,7 +18,9 @@ export default class PlanetCalculator {
     }
 
     /** Subtracts year from current year to determine age */
-    getAgeFromYear(year) { }
+    getAgeFromYear(year) {
+        return (new Date()).getFullYear() - year;
+     }
 
     getMercuryYears(n = this.age) { return n / 0.24 }
     
