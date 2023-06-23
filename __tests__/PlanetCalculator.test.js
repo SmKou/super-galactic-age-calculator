@@ -22,6 +22,12 @@ describe("Calculator", () => {
         const age_calculator = new PlanetCalculator(age);
         expect(age_calculator.age).toBe(23);
     })
+
+    test("Should set age from year", () => {
+        const age = 2073;
+        const age_calculator = new PlanetCalculator(age);
+        expect(age_calculator.age).toBe(50);
+    })
 })
 
 describe("getAgeInYear", () => {
