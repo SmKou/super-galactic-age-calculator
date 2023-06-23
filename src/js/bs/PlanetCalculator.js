@@ -12,6 +12,8 @@ export default class PlanetCalculator {
 
     getAgeInYear(year) {
         let n = year - (new Date()).getFullYear();
+        if (n < 0)
+            return 0;
         return this.age + n;
     }
 
