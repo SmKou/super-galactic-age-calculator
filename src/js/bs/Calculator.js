@@ -7,7 +7,9 @@ export default class Calculator {
         return n / 0.24;
     }
     
-    getVenusYears(n) { }
+    getVenusYears(n) { 
+        return n / 0.62;
+    }
     
     getMarsYears(n) { }
 
