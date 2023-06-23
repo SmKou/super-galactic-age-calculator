@@ -2,6 +2,7 @@ export default class Calculator {
     constructor(age) {
         this.age = age;
         this.getPlanet = {
+            "earth": (n) => n,
             "mercury": this.getMercuryYears,
             "venus": this.getVenusYears,
             "mars": this.getMarsYears,
@@ -17,7 +18,7 @@ export default class Calculator {
 
     getJupiterYears(n) { return n / 11.86 }
     
-    getPastYears(n, planet) { }
+    getPastYears(age, planet) { }
 
-    getFutureYears(n, planet) {}
+    getFutureYears(age, planet) {}
 }
