@@ -10,6 +10,8 @@ export default class PlanetCalculator {
         };
     }
 
+    getAgeInYear(year) {}
+
     getMercuryYears(n = this.age) { return n / 0.24 }
     
     getVenusYears(n = this.age) { return n / 0.62 }

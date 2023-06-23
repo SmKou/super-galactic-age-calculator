@@ -18,6 +18,20 @@ describe("Calculator", () => {
     })
 })
 
+describe("getAgeInYear", () => {
+    let calculator;
+
+    beforeEach(() => {
+        const age = 1;
+        calculator = new Calculator(age);
+    })
+
+    test("Should return age in given year", () => {
+        const year = 2073;
+        expect(calculator.getAgeInYear(year)).toBe(51);
+    })
+})
+
 describe("getMercuryYears", () => {
     let calculator;
 
