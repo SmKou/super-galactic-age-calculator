@@ -38,13 +38,17 @@ describe("getAgeInYear", () => {
     })
 })
 
-describe("setAgeToYear", () => {
-    test("Should change saved age to age in given year", () => {
+describe("getAgeFromYear", () => {
+    let calculator;
+
+    beforeEach(() => {
         const age = 1;
-        const year = 2073;
-        const calculator = new PlanetCalculator(age);
-        calculator.setAgeToYear(year);
-        expect(calculator.age).toBe(51);
+        calculator = new PlanetCalculator(age);
+    })
+
+    test("Should change saved age to age from a given year", () => {
+        const year = 2000;
+        expect(calculator.getAgeFromYear(year)).toBe(23);
     })
 })
 
