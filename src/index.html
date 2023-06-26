@@ -7,21 +7,33 @@
 </head>
 <body>
     <main>
-        <form>
+        <form method="post">
             <h1>Super Galactic Age Calculator</h1>
-            <p>Calculate an age in dog years and on other planets.</p>
+            <p>Have an age calculated in dog years and on other planets. You can choose to enter an age or have an age calculated from a given year (in the past) or in a given year (in the future). If you fill in an age, the age one would be in the given year will be calculated in addition.</p>
             <div class="options">
                 <label for="current-age">
                     Current Age:
                     <input type="number" id="current-age" min="1" max="128" placeholder="10">
                 </label>
+            </div>
+            <div class="options">
                 <label for="age-from-year">
                     From Year:
                     <input type="number" id="age-from-year" min="151" pattern="/\d{3,4}/">
                 </label>
+                <label for="past-age">
+                    Years since age:
+                    <input type="number" id="past-age" min="0" pattern="/\d{1,2}/">
+                </label>
+            </div>
+            <div class="options">
                 <label for="age-in-year">
                     In Year:
                     <input type="number" id="age-in-year" max="50000" pattern="/\d{4,5}/">
+                </label>
+                <label for="future-age">
+                    Years to age:
+                    <input type="number" id="future-age" max="150" pattern="/\d{1,3}/">
                 </label>
             </div>
             <div class="mng">
@@ -70,18 +82,34 @@
                 </label>
             </div>
         </form>
-        <section id="output" class="hidden">
-            <p class="age hidden">
+        <section>
+            <p class="display age hidden">
                 Age of: <span class="set-age"></span>
+                <span class="age-from hidden">
+                    <br>
+                    from: <span class="set-past-year"></span> is <span class="set-past-age"></span>
+                </span>
+                <span class="age-in hidden">
+                    <br>
+                    in: <span class="set-future-year"></span> is <span class="set-future-age"></span>
+                </span>
             </p>
-            <p class="planet hidden">
-                Age on <span class="set-planet"></span>
+            <p class="display planet hidden">
+                Age on <span class="set-planet"></span> is <span class="planet-age"></span>
             </p>
-            <p class="dog-age hidden">
+            <p class="display dog-age hidden">
                 Age in dog years: <span class="set-dog-age"></span>
+                <span class="dog-age-from hidden">
+                    <br>
+                    from: <span class="dog-past-year"></span> is <span class="dog-past-age"></span>
+                </span>
+                <span class="dog-age-in hidden">
+                    <br>
+                    in: <span class="dog--future-year"></span> is <span class="dog-future-age"></span>
+                </span>
             </p>
-            <p class="dog-planet hidden">
-                Age on <span class="set-dog-planet"></span>
+            <p class="display dog-planet hidden">
+                Age on <span class="set-dog-planet"></span> id <span class="dog-planet-age"></span>
             </p>
         </section>
     </main>

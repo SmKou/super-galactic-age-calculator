@@ -72,7 +72,7 @@ README.md
 index.html
 - Line 6 title in head
 
-Change this readme to reflect your project's purpose and setup. Also, do not forget to change the copyright.
+Change this readme to reflect your project's purpose and setup. Also, do not forget to change the copyright, though I would appreciate some credit.
 
 ## **Rendering**
 

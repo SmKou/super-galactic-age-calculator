@@ -19,9 +19,7 @@ module.exports = {
             fix: true,
             emitWarning: true
         }),
-        new CleanWebpackPlugin({
-            verbose: true // optional
-        }),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'super-galactic-age-calculator',
             template: './src/index.html',

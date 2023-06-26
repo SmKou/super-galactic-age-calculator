@@ -1,63 +1,113 @@
 import PlanetCalculator from './js/bs/PlanetCalculator';
-import DogCalculator from './js/bs/DogCalculator';
+import DogCalculator, { GiantDogCalculator, SmallDogCalculator } from './js/bs/DogCalculator';
+
+import { showAge, handleAgeFrom, handleAgeIn, handlePlanets, hideAll } from './js/ui/display';
 
 import './css/fonts.css';
 import './css/styles.css';
 
-const calculator = {
-    class: '',
+const controller = {
+    calculator: '',
+    proto: PlanetCalculator.prototype,
+    pastYear: 0,
+    futureYear: 0,
+    years: 0,
     dog: false,
     planet: ''
-};
+}
 
 const age = document.getElementById('current-age');
 age.addEventListener('change', e => {
-    const age = e.target.value;
-    if (calculator.dog)
-        calculator.class = new calculator.dog(age);
-    else
-        calculator.class = new PlanetCalculator(age);
-});
+    const age = parseInt(e.target.value);
+    if (Number.isNaN(age))
+        controller.calculator = '';
+    else {
+        controller.calculator = new controller.proto(age);
+        showAge(controller.calculator.age);
+        output(controller);
+    }
+})
 
 const thisYear = (new Date()).getFullYear();
+
 const ageFromYear = document.getElementById('age-from-year');
 ageFromYear.placeholder = 1986;
 ageFromYear.max = Number(thisYear) - 1;
-ageFromYear.addEventListener('change', () => {});
+ageFromYear.addEventListener('change', e => {
+    handleAgeFrom(e, controller);
+    output(controller);
+})
+
+const pastAge = document.getElementById('past-age');
+pastAge
+
 const ageInYear = document.getElementById('age-in-year');
 ageInYear.placeholder = 2050;
 ageInYear.min = Number(thisYear) + 1;
+ageInYear.addEventListener('change', e => {
+    handleAgeIn(e, controller);
+    output(controller);
+})
 
-function showOutput() {
-    const output = document.querySelector('#output');
-    if (output.classList.contains('hidden'))
-        output.classList.removes('hidden');
-}
+const selectPlanets = document.getElementById('show-planets');
+selectPlanets.addEventListener('change', e => {
+    const planets = document.querySelector('.planets');
+    if (e.checked) {
+        if (planets.classList.contains('hidden'))
+            planets.classList.remove('hidden');
+    }
+    else {
+        if (!planets.classList.contains('hidden'))
+            planets.classList.add('hidden');
+    } 
+})
 
-const show = document.querySelectorAll('[name="calculate"]');
-show.forEach(elem => {
-    elem.addEventListener('change', e => {
-        const cn = document.querySelector('.' + e.target.value);
-        const checked = e.target.checked;
-        if (checked) {
-            if (cn.classList.contains('hidden'))
-                cn.classList.remove('hidden');
-        }
-        else {
-            if (!cn.classList.contains('hidden'))
-                cn.classList.add('hidden');
-        }
-    });
-});
+const planets = document.querySelectorAll('[name="planet"]');
+planets.forEach(elem => elem.addEventListener('change', () => {
+    handlePlanets(controller);
+    output(controller);
+}))
+
+const selectDogs = document.getElementById('show-dogs');
+selectDogs.addEventListener('change', e => {
+    const dogs = document.querySelector('.dogs');
+    if (e.checked) {
+        if (dogs.classList.contains('hidden'))
+            dogs.classList.remove('hidden')
+    }
+    else {
+        if (!dogs.classList.contains('hidden'))
+            dogs.classList.add('hidden')
+    }
+})
+
+const dogs = document.querySelector('.dogs');
+dogs.addEventListener('change', e => {
+    const id = e.target.id;
+    switch (id) {
+        case 'small':
+            controller.proto = SmallDogCalculator.prototype;
+            controller.calculator = new controller.proto(controller.calculator.age);
+            break;
+        case 'giant':
+            controller.proto = GiantDogCalculator.prototype;
+            controller.calculator = new controller.proto(controller.calculator.age);
+            break;
+        default:
+            controller.proto = DogCalculator.prototype;
+            controller.calculator = new controller.proto(controller.calculator.age);
+    }
+    controller.dog = true;
+    handleDogs(controller);
+    output(controller);
+})
 
 const form = document.querySelector('form');
 form.addEventListener('reset', () => {
     form.reset();
-    show.forEach(elem => {
-        const cn = elem.id.split('-')[1];
-        const opt = document.querySelector('.' + cn);
-        if (!opt.classList.contains('hidden'))
-            opt.classList.add('hidden');
-    });
-    document.querySelector('#output').classList.add('hidden');
-});
+    controller.calculator = '';
+    controller.proto = PlanetCalculator.prototype;
+    controller.dog = false;
+    controller.planet = '';
+    hideAll();
+})
