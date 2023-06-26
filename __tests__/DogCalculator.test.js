@@ -2,7 +2,7 @@ import {
     DogCalculator as Dog,
     GiantDogCalculator as GDog,
     SmallDogCalculator as SDog
-} from '../src/js/bs/DogCalculator';
+} from '../src/js/DogCalculator';
 
 describe("DogCalculator", () => {
     test("Should get an age in dog years", () => {

@@ -1,4 +1,4 @@
-import PlanetCalculator from '../src/js/bs/PlanetCalculator';
+import PlanetCalculator from '../src/js/PlanetCalculator';
 
 describe("Calculator", () => {
     let calculator;
