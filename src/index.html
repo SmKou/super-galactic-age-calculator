@@ -6,5 +6,121 @@
     <title>Super Galactic Age Calculator</title>
 </head>
 <body>
+    <main>
+        <form method="post">
+            <div class="container">
+                <h1>Super Galactic Age Calculator</h1>
+                <p>Have an age calculated in dog years and on other planets. You can choose to enter an age or have an age
+                    calculated
+                    from a given year (in the past) or in a given year (in the future). If you don't want the age converted,
+                    only a
+                    number of years from or to a given age, then fill in Years since age or Years to age. Remember to input
+                    ages, not
+                    years for these.</p>
+                <div class="options">
+                    <label for="current-age">
+                        Current Age:
+                        <input type="number" id="current-age" min="1" max="128" placeholder="10">
+                    </label>
+                </div>
+                <div class="options container">
+                    <label for="age-from-year">
+                        From Year:
+                        <input type="number" id="age-from-year" min="151" pattern="/\d{3,4}/">
+                    </label>
+                    <label for="past-age">
+                        Years since age:
+                        <input type="number" id="past-age" min="0" pattern="/\d{1,2}/">
+                    </label>
+                </div>
+                <div class="options container">
+                    <label for="age-in-year">
+                        In Year:
+                        <input type="number" id="age-in-year" max="50000" pattern="/\d{4,5}/">
+                    </label>
+                    <label for="future-age">
+                        Years to age:
+                        <input type="number" id="future-age" max="150" pattern="/\d{1,3}/">
+                    </label>
+                </div>
+                <div class="mng">
+                    <input type="submit" class="button-primary" value="Submit">
+                    <input type="reset" value="Clear All">
+                </div>
+                <div class="options expandable">
+                    <input type="checkbox" id="show-planets" value="planets">
+                    <label for="show-planets"><span>Planets</span></label>
+                    <div class="container">
+                        <label for="mercury">
+                            <input type="radio" id="mercury" name="planet" value="mercury">
+                            Mercury
+                        </label>
+                        <label for="venus">
+                            <input type="radio" id="venus" name="planet" value="venus">
+                            Venus
+                        </label>
+                        <label for="mars">
+                            <input type="radio" id="mars" name="planet" value="mars">
+                            Mars
+                        </label>
+                        <label for="jupiter">
+                            <input type="radio" id="jupiter" name="planet" value="jupiter">
+                            Jupiter
+                        </label>
+                    </div>
+                </div>
+                <div class="options expandable">
+                    <input type="checkbox" id="show-dogs" value="dogs">
+                    <label for="show-dogs"><span>Dogs</span></label>
+                    <div class="container">
+                        <label for="small">
+                            <input type="radio" id="small" name="dog" value="small">
+                            Small dog
+                        </label>
+                        <label for="medium-large">
+                            <input type="radio" id="medium-large" name="dog" value="medium-large">
+                            Medium or large dog
+                        </label>
+                        <label for="giant">
+                            <input type="radio" id="giant" name="dog" value="giant">
+                            Giant dog
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <section class="display hidden">
+            <p>
+                Age of: <span class="set-age"></span>
+                <span class="age-from hidden">
+                    <br>
+                    from: <span class="set-past-year"></span> is <span class="set-past-age"></span>
+                </span>
+                <span class="age-in hidden">
+                    <br>
+                    in: <span class="set-future-year"></span> is <span class="set-future-age"></span>
+                </span>
+            </p>
+            <p class="planet hidden">
+                <span class="set-years"></span> years on <span class="set-planet"></span> is <span
+                    class="planet-years"></span>
+            </p>
+            <p class="dog-age hidden">
+                Age in dog years: <span class="set-dog-age"></span>
+                <span class="dog-age-from hidden">
+                    <br>
+                    from: <span class="dog-past-year"></span> is <span class="dog-past-age"></span>
+                </span>
+                <span class="dog-age-in hidden">
+                    <br>
+                    in: <span class="dog-future-year"></span> is <span class="dog-future-age"></span>
+                </span>
+            </p>
+            <p class="dog-planet hidden">
+                <span class="set-years"></span> years on <span class="set-planet"></span> is <span
+                    class="dog-planet-years"></span> for a dog
+            </p>
+        </section>
+    </main>
 </body>
 </html>

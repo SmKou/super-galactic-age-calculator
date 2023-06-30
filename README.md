@@ -4,6 +4,8 @@ By: Stella Marie
 
 App for calculating human and dog ages on other planets.
 
+View on [Github Pages](https://username.github.io/super-galactic-age-calculator/)
+
 ## **Technologies Used**
 
 - HTML5
@@ -19,10 +21,20 @@ App for calculating human and dog ages on other planets.
 
 Super Galactic Age Calculator converts age in earth years to the equivalent on other planets, namely Mercury, Venus, Mars and Jupiter. The age can either be in human years or dog years. The standard conversion is 1 to 7 for dog years, but this is adjusted if you choose to base it on a small- or giant-sized dog. For the given age, one can enter an actual age, or have an age calculated from a given year, so long as the year is not 150 or less.
 
+View on [Github Pages](https://username.github.io/super-galactic-age-calculator/)
+
 ### Under Consideration
 
 - Add celebrities and use their age in the calculator
 - Calculate days between birthdays and total since birth
+
+## **Features**
+
+To run the test suite, use the command ```npm run test``` in the terminal. You can also use ```npx jest```.
+
+To create the production ready code for your project, use the command ```npm run build``` in the terminal.
+
+To build and preview your project, use either ```npm run start``` or ```npm start``` in the terminal.
 
 ## **Complete Setup**
 
